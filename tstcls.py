@@ -2,24 +2,22 @@ import inspect
 
 from pytest import fixture
 
-__all__ = [
-    'TestClassBase'
-]
+__all__ = ["TestClassBase"]
 
 
 class TestClassBase(object):
     @classmethod
     def find_fixtures(cls, func, request):
         fixtures = {}
-        arg_spec = inspect.getargspec(func)
+        arg_spec = inspect.getfullargspec(func)
         for index, arg in enumerate(arg_spec.args):
-            if index == 0 and arg in ['self', 'cls']:
+            if index == 0 and arg in ["self", "cls"]:
                 continue
             fixtures[arg] = request.getfixturevalue(arg)
 
         return fixtures
 
-    @fixture(autouse=True, scope='class')
+    @fixture(autouse=True, scope="class")
     def init_class(self, request):
         setup_fixtures = self.find_fixtures(self.setup_test_class, request)
         teardown_fixtures = self.find_fixtures(self.teardown_test_class, request)

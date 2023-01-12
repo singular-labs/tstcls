@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "pytest-tstcls"
+version = "2022.1.1"
+description = "Test Class Base"
+authors = ["Singular Labs, Inc <devs@singular.net>"]
+license = "MIT License"
+readme = "README.md"
+keywords = ["pytest", "test", "class", "base"]
+packages = [
+    { include = "tstcls" }
+]
+repository = "https://github.com/singular-labs/tstcls"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pytest = "^7.2.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 120
+target-version = ['py310']
+
+[tool.isort]
+profile = "black"
