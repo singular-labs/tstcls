@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "pytest-tstcls"
-version = "2022.1.1"
+version = "2023.1.1"
 description = "Test Class Base"
 authors = ["Singular Labs, Inc <devs@singular.net>"]
 license = "MIT License"
