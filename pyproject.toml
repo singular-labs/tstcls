@@ -7,7 +7,7 @@ license = "MIT License"
 readme = "README.md"
 keywords = ["pytest", "test", "class", "base"]
 packages = [
-    { include = "tstcls" }
+    { include = "tstcls.py" }
 ]
 repository = "https://github.com/singular-labs/tstcls"
 
