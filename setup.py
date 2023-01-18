@@ -9,7 +9,7 @@ with open(path.join(this_directory, 'README.md'), 'rb') as f:
     long_description = f.read().decode('utf8')
 
 setup(
-    name='pytest-tstcls',
+    name='singular-pytest-tstcls',
     version='2020.1.1',
     py_modules=['tstcls'],
     provides=['tstcls'],
