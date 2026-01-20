@@ -11,7 +11,7 @@ class TestClassBase(object):
     @classmethod
     def find_fixtures(cls, func, request):
         fixtures = {}
-        arg_spec = inspect.getargspec(func)
+        arg_spec = inspect.getfullargspec(func)
         for index, arg in enumerate(arg_spec.args):
             if index == 0 and arg in ['self', 'cls']:
                 continue
