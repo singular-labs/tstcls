@@ -10,7 +10,7 @@ with open(path.join(this_directory, 'README.md'), 'rb') as f:
 
 setup(
     name='singular-pytest-tstcls',
-    version='2020.1.1',
+    version='2026.1.1',
     py_modules=['tstcls'],
     provides=['tstcls'],
     description='Test Class Base',
@@ -22,16 +22,17 @@ setup(
     keywords="pytest, test, class, base",
     install_requires=REQUIREMENTS,
     license="MIT License",
-    python_requires='>=2.6, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*',
+    python_requires='>=3.8',
     include_package_data=True,
     classifiers=[
         'Development Status :: 5 - Production/Stable',
         'Intended Audience :: Developers',
         'Topic :: Software Development :: Build Tools',
         'License :: OSI Approved :: MIT License',
-        'Programming Language :: Python :: 2.7',
-        'Programming Language :: Python :: 3.4',
-        'Programming Language :: Python :: 3.5',
-        'Programming Language :: Python :: 3.6',
+        'Programming Language :: Python :: 3.8',
+        'Programming Language :: Python :: 3.9',
+        'Programming Language :: Python :: 3.10',
+        'Programming Language :: Python :: 3.11',
+        'Programming Language :: Python :: 3.12',
     ],
 )
